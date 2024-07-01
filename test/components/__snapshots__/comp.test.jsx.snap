@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GifItem Debe coincidir el snapshot 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <img
+      alt="Title"
+      src="https://localhost/image.jpg"
+    />
+    <p>
+      Title
+    </p>
+  </div>
+</div>
+`;
