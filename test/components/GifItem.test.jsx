@@ -9,8 +9,7 @@ describe('GifItem', () => {
   test('Debe coincidir el snapshot', () => {
       
     const { container } = render(<GifItem title={title} url={url} />)
-    expect( container ).toMatchSnapshot()
-  
+    expect(container).toMatchSnapshot()
   })
 
   test('mostrar imagen con el url y el alt indicado', () => {
