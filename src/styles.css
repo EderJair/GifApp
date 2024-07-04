@@ -1,63 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
-  font-family: Helvetica, Arial, sans-serif;
-  background-color: rgb(234, 234, 234);
+  font-family: "Poppins", sans-serif;  
+  background-color: rgb(228, 226, 248);
+  margin: 0;
+  padding: 0;
+}
+
+nav{
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+nav h1 {
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+nav h1:hover {
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  gap: 5px;
+  transition: all 0.3s;
+}
+
+nav a:hover {
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
 body {
   padding: 60px;
 }
 
+form{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
 input {
-  background-color: white;
-  border-radius: 5px;
-  border: 1px solid rgb(97, 32, 158);
+  background-color: rgb(255, 255, 255);
+  border-radius: 9px;
+  border: 4px solid rgba(97, 32, 158, 0.599);
   color: black;
   font-size: 1.2rem;
   outline: none;
   padding: 10px 15px;
-  width: 100%;
+  width: 50%;
 }
 
 h2 {
-  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 3.5rem;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
 }
 
-h3 {
-  font-size: 3rem;
-  margin-bottom: 5px;
+p{
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
 }
+
+
 
 .card-grid {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .card {
   align-content: center;
   align-items: center;
-  background-color: white;
+  background-color: rgb(14, 6, 56);
   border-radius: 10px;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.03);
   display: flex;
+  height: 50%;
+  width: 30%;
   flex-direction: column;
-  height: 0%;  
   justify-content: center;
   margin-bottom: 20px;
   margin-right: 20px;
   overflow: hidden;
+  
 }
 
+
 .card p {
-  background-color: white;
+  color: white;
+  background-color: rgb(14, 6, 56);
   flex: 1;
   font-size: 1.5rem;
   margin-top: 5px;
-  padding: 5px 20px 0px 20px;
+  padding: 5px 20px 10px 20px;
   text-align: center;
 }
 
 .card img {
   width: 100%;
+}
+
+.div-button{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+
+h3 {
+  font-size: 2.6rem;
+}
+
+button{
+  font-weight: 500;
+  margin-right: 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  padding: 15px;
+  color: white;
+  font-size: 20px;
+  background-color: rgb(23, 40, 95);
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: rgb(99, 98, 163);
 }

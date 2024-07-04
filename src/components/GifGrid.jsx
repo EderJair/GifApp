@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { getGifs } from "../helpers/getGifs"
 import { GifItem } from "./GifItem"
 import { useFetchGifs } from "../hooks/useFetchGifs"
+import '../styles/gifGrid.css'
 
 
 
@@ -14,7 +15,10 @@ export const GifGrid = ({category}) => {
     
     return (
         <>
-            <h3>{category}</h3>
+            <div className="div-button">
+                <h3>{category.toUpperCase()}</h3> 
+                <button onClick={e => Eliminar(e, images.id)}>Eliminar</button>
+            </div>
             {
                 isLoading && <p>Cargando...</p>
                 // que significa isLoading? si es true, entonces muestra el mensaje de cargando

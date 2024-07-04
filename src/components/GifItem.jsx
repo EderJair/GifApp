@@ -1,4 +1,5 @@
 import Proptypes from 'prop-types'
+import '../styles/gifItem.css'
 
 export const GifItem = ({id, title, url}) => {
   return (
