@@ -19,14 +19,17 @@ export const AddCategory = ({onNewCategory}) => {
     
 
     return (
-        <form onSubmit={onSubmit} aria-label="form">
-            <input 
-            type="text"
-            placeholder="Find your gif"
-            value={InputValue}
-            onChange={handleInputChange}
-            />
-        </form>
+        <>
+            <form onSubmit={onSubmit} aria-label="form">
+                <input 
+                type="text"
+                placeholder="Find your gif"
+                value={InputValue}
+                onChange={handleInputChange}
+                />
+            </form>
+        </>
+       
         
     )
 }

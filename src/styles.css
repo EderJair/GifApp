@@ -5,6 +5,7 @@
   background-color: rgb(228, 226, 248);
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 nav{
@@ -92,24 +93,27 @@ p{
 .card {
   align-content: center;
   align-items: center;
-  background-color: rgb(14, 6, 56);
+  background-color: rgb(49, 17, 105);
   border-radius: 10px;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.03);
   display: flex;
-  height: 50%;
   width: 30%;
   flex-direction: column;
   justify-content: center;
   margin-bottom: 20px;
   margin-right: 20px;
   overflow: hidden;
-  
+  transition: all 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
 }
 
 
 .card p {
   color: white;
-  background-color: rgb(14, 6, 56);
+  background-color: rgb(49, 17, 105);
   flex: 1;
   font-size: 1.5rem;
   margin-top: 5px;
@@ -118,13 +122,20 @@ p{
 }
 
 .card img {
+  height: 350px;
   width: 100%;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
 }
+
+
 
 .div-button{
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  margin-top: 40px;
 }
 
 
@@ -141,10 +152,74 @@ button{
   padding: 15px;
   color: white;
   font-size: 20px;
-  background-color: rgb(23, 40, 95);
+  background-color: rgb(49, 17, 105);
   transition: all 0.3s;
 }
 
+.recent{
+  color: rgb(5, 5, 5);
+  font-size: 1.5rem;
+  text-decoration: none;
+  list-style: none;
+}
+
+dialog{
+  border-radius: 10px;
+  border: 0px solid rgb(0, 0, 0);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.314);
+  margin: 600px 75px;
+  padding: 30px;
+  transition: all 0.3s;
+}
+
+dialog h2{
+  font-size: 2.6rem;
+  color: rgb(0, 0, 0);
+  margin-bottom: 20px;
+}
+
+dialog li{
+  list-style: none;
+  transition: all 0.3s;
+}
+
+dialog li:hover {
+  transform: translateY(-3px)
+}
+
+dialog a:hover{
+  color:rgb(82, 39, 157);
+}
+
+dialog button{
+  margin-top: 20px;
+  margin-bottom: 0px;
+  font-size: 16px;
+}
+
+
+
 button:hover {
-  background-color: rgb(99, 98, 163);
+  background-color: rgb(82, 39, 157);
+  transform: translateY(-3px);
+}
+
+
+.footer{
+  display: flex;
+  justify-content: center;
+  background-color: rgb(218, 216, 248);
+  font-weight: 500;
+  font-size: 23px;
+  border-radius: 10px;
+  margin: 30px auto;
+  padding: 10px;
+  transition: all 0.3s;
+  width: 50%;
+}
+
+.footer:hover {
+  background-color: rgb(82, 39, 157);
+  color: white;
+  transform: translateY(-3px);
 }

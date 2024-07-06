@@ -1,12 +1,8 @@
 import Proptypes from 'prop-types'
-import '../styles/gifItem.css'
 
 export const GifItem = ({id, title, url}) => {
 
   const copy = () => {
-    //para copiar al portapapeles
-    // navigator.clipboard.writeText(url) es una funcion que permite copiar al portapapeles
-    // el texto que se le pase como argumento en este caso url
     navigator.clipboard.writeText(url)
     alert('Copiado en el portales')
   };
@@ -16,7 +12,7 @@ export const GifItem = ({id, title, url}) => {
 
   return (
     <div className="card">
-        <img src={url} alt={title} onClick={copy}/>
+        <img src={url} alt={title} onClick={copy} loading='lazy'/>
         <p>{title}</p>
     </div>
   )

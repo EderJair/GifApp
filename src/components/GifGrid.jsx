@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { getGifs } from "../helpers/getGifs"
 import { GifItem } from "./GifItem"
 import { useFetchGifs } from "../hooks/useFetchGifs"
-import '../styles/gifGrid.css'
 
 
 
@@ -16,11 +15,16 @@ export const GifGrid = ({category, handleDelete}) => {
     const handD = () => {
         handleDelete(category)
     }
+
+    const emotes = ['👽', '🚀', '💊', '⭐', '💀', '⚽']
     
+    const randomEmote = () => emotes[Math.floor(Math.random() * emotes.length)]
+
+
     return (
         <>
             <div className="div-button">
-                <h3>{category.toUpperCase()}</h3> 
+                <h3 id={category}>{category.toUpperCase()} {randomEmote()}</h3> 
                 <button onClick={handD}>Eliminar</button>
             </div>
             {

@@ -1,22 +1,31 @@
 import { useState } from "react"
 import { AddCategory, GifGrid } from "./components"
 
+
 export const GifExpertApp = () => {
 
-  const [categories, setCategories] = useState([])
+  const [categories, setCategories] = useState(['valorant'])
 
   
 
   const onAddCategory = (NewCategory) => {
     
     if(categories.includes(NewCategory)) return alert('Ya existe la categoria');
-    setCategories([...categories, NewCategory])
+    setCategories([NewCategory, ...categories])
   }
 
   const handleDelete = (category) => {
 
     setCategories(categories.filter(cat => cat !== category))
 
+  }
+
+  const OpenModal = () => {
+    window.modal.showModal()
+  }
+
+  const closeModal = () => {
+    window.modal.close()
   }
 
 
@@ -33,7 +42,25 @@ export const GifExpertApp = () => {
       <h2>GifExpertApp 🚀</h2>
 
       <AddCategory onNewCategory={onAddCategory}/>
+      <button onClick={OpenModal}>
+        busquedas recientes 📚
+      </button>
 
+      <dialog id="modal">
+
+        <h2>Busquedas recientes</h2>
+        <ul>
+          {
+            categories < 1 ? <p>No hay busquedas</p> :
+            categories.map((category) => (
+              <li><a className="recent" href={`#${category}`} key={category}>📌{category.toUpperCase()}</a></li>
+            ))
+          }
+        </ul>
+        <button onClick={closeModal}> Cerrar </button>
+
+      </dialog>
+      
 
 
       {
@@ -44,6 +71,13 @@ export const GifExpertApp = () => {
         
       ))
       }
+
+      <div className="footer">
+        Pagina hecha por Jair Quispe 🚀
+      </div>
+
+
+      
 
 
     </>
