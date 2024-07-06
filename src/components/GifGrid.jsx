@@ -7,17 +7,21 @@ import '../styles/gifGrid.css'
 
 
 
-export const GifGrid = ({category}) => {
+export const GifGrid = ({category, handleDelete}) => {
 
     const {images, isLoading} = useFetchGifs(category)
 
     console.log({ isLoading, images})
+
+    const handD = () => {
+        handleDelete(category)
+    }
     
     return (
         <>
             <div className="div-button">
                 <h3>{category.toUpperCase()}</h3> 
-                <button onClick={e => Eliminar(e, images.id)}>Eliminar</button>
+                <button onClick={handD}>Eliminar</button>
             </div>
             {
                 isLoading && <p>Cargando...</p>
